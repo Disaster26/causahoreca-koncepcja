@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Wyposażenie hoteli i gastronomii Warszawa | CAUSA HORECA - podgląd</title>
-<meta name="description" content="CAUSA HORECA - dystrybutor sprzętu i wyposażenia hoteli, centrów konferencyjnych, restauracji, kawiarni i cateringu. Podgląd koncepcji nowej strony.">
+<meta name="description" content="CAUSA HORECA - dystrybutor sprzętu i wyposażenia hoteli, centrów konferencyjnych, restauracji i kawiarni. Podgląd koncepcji nowej strony.">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#7F0047">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%237F0047'/%3E%3Cpath d='M20 9.5a8 8 0 1 0 0 13' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -77,7 +77,7 @@ section{padding:clamp(72px,8vw,128px) 0}
 /* obszary */
 .areas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2vw,36px)}
 .area{position:relative;background:#fff;display:flex;flex-direction:column}
-.area .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--grey)}
+.area .ph{position:relative;aspect-ratio:6/5;overflow:hidden;background:var(--grey)}
 .slides{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}
 .slides::-webkit-scrollbar{display:none}
 .slides.drag{cursor:grabbing;scroll-snap-type:none}
@@ -98,6 +98,19 @@ section{padding:clamp(72px,8vw,128px) 0}
 .swipe i{flex:1;height:2px;background:var(--line);position:relative}
 .area li:not(:last-child)::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--bordo);margin:0 11px;opacity:.7}
 
+/* tarasy */
+.out{background:var(--grey)}
+.gal{display:flex;gap:clamp(10px,1vw,18px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 calc((100vw - var(--w)) / 2);scroll-padding:0 calc((100vw - var(--w)) / 2);cursor:grab}
+.gal::-webkit-scrollbar{display:none}
+.gal.drag{cursor:grabbing;scroll-snap-type:none}
+.gal button{flex:none;height:clamp(240px,27vw,520px);padding:0;border:0;background:var(--line);scroll-snap-align:start;cursor:zoom-in}
+.gal img{height:100%;width:auto;user-select:none;-webkit-user-drag:none}
+.gbar{display:flex;align-items:center;gap:12px;margin-top:18px;color:var(--mut);font-size:14px}
+.gbar i{flex:1;height:2px;background:var(--line)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px clamp(28px,3vw,56px);margin-top:clamp(36px,4vw,56px)}
+.facts div{border-top:2px solid var(--bordo);padding-top:18px}
+.facts h3{font-size:clamp(20px,1.4vw,24px);margin-bottom:8px}
+.facts p{color:var(--mut)}
 /* marki */
 .brands{background:var(--bordo);color:#fff;position:relative;overflow:hidden}
 .brands .head h2{color:#fff}
@@ -251,6 +264,8 @@ footer .bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
   .bgrid span{font-size:15px}
   .brands .mono{width:90vw;right:-30vw;top:10px}
   .pop ul{columns:1}
+  .facts{grid-template-columns:1fr}
+  .gal{gap:10px}
   .f2{grid-template-columns:1fr}
   footer .cols{grid-template-columns:1fr 1fr;gap:26px 20px}
   footer .cols>div:first-child{grid-column:1/-1}
@@ -306,7 +321,7 @@ footer .bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
   <div class="hero-in">
     <h1>Wyposażenie hoteli i gastronomii <span>od zaplecza kuchni po nakryty stół</span></h1>
     <div class="rule" aria-hidden="true"><svg viewBox="0 0 96 22"><path d="M1 15H40c9 0 13-4 13-8.5a5.5 5.5 0 1 0-11 0C42 11 46 15 55 15H96"/></svg><i></i></div>
-    <p class="lead">Dostarczamy sprzęt dla hoteli, pensjonatów, centrów konferencyjnych, restauracji, kawiarni i cateringu. Od ponad 20 lat sprowadzamy go od producentów z Unii Europejskiej, USA i Australii.</p>
+    <p class="lead">Dostarczamy sprzęt dla hoteli, pensjonatów, centrów konferencyjnych, restauracji i kawiarni. Od 1991 roku sprowadzamy go od producentów z Unii Europejskiej, USA i Australii.</p>
     <div class="cta">
       <a class="btn btn-w" href="#oferta">Zobacz ofertę <svg viewBox="0 0 30 14"><path d="M1 7h26M21 1.5 27 7l-6 5.5"/></svg></a>
       <a class="btn btn-o" href="tel:+48228563193">Zadzwoń: 22 856 31 93</a>
@@ -326,79 +341,123 @@ footer .bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
 
     <div class="areas">
       <article class="area" data-g="Sala i konferencje">
-        <div class="ph" data-n="2 zdjęcia"><div class="slides">
+        <div class="ph" data-n="3 zdjęcia"><div class="slides">
           <button type="button" data-full="img/sala0-full.webp" aria-label="Powiększ zdjęcie"><img src="img/sala0-640.webp" srcset="img/sala0-640.webp 640w, img/sala0-1000.webp 1000w, img/sala0-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Sala bankietowa z długimi stołami" loading="lazy" decoding="async"></button>
           <button type="button" data-full="img/sala1-full.webp" aria-label="Powiększ zdjęcie"><img src="img/sala1-640.webp" srcset="img/sala1-640.webp 640w, img/sala1-1000.webp 1000w, img/sala1-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Sala konferencyjna ze stołami okrągłymi" loading="lazy" decoding="async"></button>
-        </div><div class="dots"><i class="on"></i><i></i></div></div>
+          <button type="button" data-full="img/fb77-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb77-640.webp" srcset="img/fb77-640.webp 640w, img/fb77-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Drewniane wózki serwisowe do restauracji" loading="lazy" decoding="async"></button>
+        </div><div class="dots"><i class="on"></i><i></i><i></i></div></div>
         <div class="tx">
           <h3><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M1 11H12c6 0 9-3 9-6a3.6 3.6 0 1 0-7.2 0c0 3 3 6 9 6H33"/></svg>Sala i konferencje</h3>
-          <p>Meble bankietowe i konferencyjne Forbes Group, tkaniny, recepcje i bary na kółkach.</p>
-          <ul><li>Meble bankietowe</li><li>Stoły konferencyjne</li><li>Mównice</li><li>Stanowiska recepcji</li><li>Bary ruchome</li><li>Wózki bagażowe</li></ul>
+          <p>Meble bankietowe i konferencyjne Forbes Group, mównice klasyczne i nowoczesne, recepcje, bary na kółkach i drewniane wózki serwisowe.</p>
+          <ul><li>Meble bankietowe</li><li>Stoły konferencyjne</li><li>Mównice</li><li>Stanowiska recepcji</li><li>Bary ruchome</li><li>Wózki serwisowe</li></ul>
         </div>
       </article>
 
       <article class="area" data-g="Bufet">
-        <div class="ph" data-n="2 zdjęcia"><div class="slides">
-          <button type="button" data-full="img/bufet0-full.webp" aria-label="Powiększ zdjęcie"><img src="img/bufet0-640.webp" srcset="img/bufet0-640.webp 640w, img/bufet0-1000.webp 1000w, img/bufet0-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Bufet śniadaniowy z kloszami i stosami talerzy" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="img/bufet1-full.webp" aria-label="Powiększ zdjęcie"><img src="img/bufet1-640.webp" srcset="img/bufet1-640.webp 640w, img/bufet1-1000.webp 1000w, img/bufet1-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Podgrzewacze bufetowe z daniami" loading="lazy" decoding="async"></button>
-        </div><div class="dots"><i class="on"></i><i></i></div></div>
+        <div class="ph" data-n="5 zdjęć"><div class="slides">
+          <button type="button" data-full="img/fb70-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb70-640.webp" srcset="img/fb70-640.webp 640w, img/fb70-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Bufet z kloszem na drewnianym stole w restauracji hotelowej" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb76-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb76-640.webp" srcset="img/fb76-640.webp 640w, img/fb76-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Mobilne bufety w drewnianej obudowie" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb68-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb68-516.webp" srcset="img/fb68-516.webp 516w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="516" height="430" alt="Dystrybutory płatków i soków, złocone i posrebrzane" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb44-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb44-640.webp" srcset="img/fb44-640.webp 640w, img/fb44-1000.webp 1000w, img/fb44-1140.webp 1140w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1140" height="950" alt="Bufet przy basenie hotelowym" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb71-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb71-640.webp" srcset="img/fb71-640.webp 640w, img/fb71-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Dystrybutory soków i płatków na bufet śniadaniowy" loading="lazy" decoding="async"></button>
+        </div><div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div></div>
         <div class="tx">
           <h3><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M1 11H12c6 0 9-3 9-6a3.6 3.6 0 1 0-7.2 0c0 3 3 6 9 6H33"/></svg>Bufet</h3>
-          <p>Systemy bufetowe Sambonet i Paderno, bemary Causa Horeca, akcesoria melaminowe i drewniane.</p>
-          <ul><li>System bufetowy</li><li>Bemary</li><li>Podgrzewacze do jajek</li><li>Pasteryzatory Pollux</li><li>Dystrybutory soków</li></ul>
+          <p>Systemy bufetowe Sambonet i Paderno, mobilne bufety w drewnianej obudowie do dań zimnych i gorących, dystrybutory soków i płatków włoskiej produkcji.</p>
+          <ul><li>System bufetowy</li><li>Bufety mobilne</li><li>Bemary</li><li>Dystrybutory soków i płatków</li><li>Podgrzewacze do jajek</li></ul>
         </div>
       </article>
 
       <article class="area" data-g="Nakryty stół">
         <div class="ph" data-n="3 zdjęcia"><div class="slides">
+          <button type="button" data-full="img/fb78-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb78-640.webp" srcset="img/fb78-640.webp 640w, img/fb78-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Zestawy melaminowe: talerze, patery i filiżanki" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb79-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb79-640.webp" srcset="img/fb79-640.webp 640w, img/fb79-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Zastawa melaminowa Cartaffini w różnych wzorach" loading="lazy" decoding="async"></button>
           <button type="button" data-full="img/stol0-full.webp" aria-label="Powiększ zdjęcie"><img src="img/stol0-640.webp" srcset="img/stol0-640.webp 640w, img/stol0-1000.webp 1000w, img/stol0-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Nakryty stół z kieliszkami i sztućcami" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="img/stol1-full.webp" aria-label="Powiększ zdjęcie"><img src="img/stol1-640.webp" srcset="img/stol1-640.webp 640w, img/stol1-1000.webp 1000w, img/stol1-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Długi stół przygotowany na przyjęcie" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="img/stol2-full.webp" aria-label="Powiększ zdjęcie"><img src="img/stol2-640.webp" srcset="img/stol2-640.webp 640w, img/stol2-1000.webp 1000w, img/stol2-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Sztućce i kieliszki na białym obrusie" loading="lazy" decoding="async"></button>
         </div><div class="dots"><i class="on"></i><i></i><i></i></div></div>
         <div class="tx">
           <h3><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M1 11H12c6 0 9-3 9-6a3.6 3.6 0 1 0-7.2 0c0 3 3 6 9 6H33"/></svg>Nakryty stół</h3>
-          <p>Porcelana Wedgwood i Vista Alegre, sztućce Sambonet, Arthur Krupp i Oneida, kieliszki Lebrun, obrusy i serwetki.</p>
-          <ul><li>Porcelana</li><li>Porcelana żaroodporna</li><li>Sztućce</li><li>Kieliszki i dekantery</li><li>Obrusy i bieżniki</li></ul>
+          <p>Porcelana Wedgwood i Vista Alegre, nietłukąca się zastawa melaminowa Cartaffini, sztućce Sambonet, kieliszki, obrusy i serwetki.</p>
+          <ul><li>Porcelana</li><li>Zastawa melaminowa</li><li>Sztućce</li><li>Kieliszki i dekantery</li><li>Obrusy i bieżniki</li></ul>
         </div>
       </article>
 
       <article class="area" data-g="Kawa i bar">
-        <div class="ph" data-n="2 zdjęcia"><div class="slides">
+        <div class="ph" data-n="3 zdjęcia"><div class="slides">
           <button type="button" data-full="img/kawa0-full.webp" aria-label="Powiększ zdjęcie"><img src="img/kawa0-640.webp" srcset="img/kawa0-640.webp 640w, img/kawa0-1000.webp 1000w, img/kawa0-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Ekspres kolbowy w kawiarni" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb67-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb67-640.webp" srcset="img/fb67-640.webp 640w, img/fb67-851.webp 851w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="851" height="709" alt="Bar Forbes Mixology" loading="lazy" decoding="async"></button>
           <button type="button" data-full="img/kawa1-full.webp" aria-label="Powiększ zdjęcie"><img src="img/kawa1-640.webp" srcset="img/kawa1-640.webp 640w, img/kawa1-1000.webp 1000w, img/kawa1-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Profesjonalny ekspres do kawy" loading="lazy" decoding="async"></button>
-        </div><div class="dots"><i class="on"></i><i></i></div></div>
+        </div><div class="dots"><i class="on"></i><i></i><i></i></div></div>
         <div class="tx">
           <h3><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M1 11H12c6 0 9-3 9-6a3.6 3.6 0 1 0-7.2 0c0 3 3 6 9 6H33"/></svg>Kawa i bar</h3>
-          <p>Ekspresy La Pavoni do baru, pubu i hotelu, młynki, dystrybutory do kawy i kostkarki do lodu.</p>
-          <ul><li>Ekspresy automatyczne</li><li>Ekspresy tradycyjne</li><li>Młynki do kawy</li><li>Kostkarki do lodu</li><li>Sprzęt barowy</li></ul>
+          <p>Bary Forbes Mixology, ekspresy La Pavoni do baru, pubu i hotelu, młynki, dystrybutory do kawy i kostkarki do lodu.</p>
+          <ul><li>Bary mobilne</li><li>Ekspresy do kawy</li><li>Młynki do kawy</li><li>Kostkarki do lodu</li><li>Sprzęt barowy</li></ul>
         </div>
       </article>
 
       <article class="area" data-g="Kuchnia i zmywalnia">
-        <div class="ph" data-n="2 zdjęcia"><div class="slides">
+        <div class="ph" data-n="4 zdjęcia"><div class="slides">
+          <button type="button" data-full="img/fb86-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb86-640.webp" srcset="img/fb86-640.webp 640w, img/fb86-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Kuchnia profesjonalna Angelo Po" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb69-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb69-640.webp" srcset="img/fb69-640.webp 640w, img/fb69-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Piece do pizzy włoskiej produkcji" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb80-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb80-640.webp" srcset="img/fb80-640.webp 640w, img/fb80-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Pojemniki termoizolacyjne Melform do transportu żywności" loading="lazy" decoding="async"></button>
           <button type="button" data-full="img/kuchnia0-full.webp" aria-label="Powiększ zdjęcie"><img src="img/kuchnia0-640.webp" srcset="img/kuchnia0-640.webp 640w, img/kuchnia0-1000.webp 1000w, img/kuchnia0-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Zmywalnia w kuchni profesjonalnej ze stali nierdzewnej" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="img/kuchnia1-full.webp" aria-label="Powiększ zdjęcie"><img src="img/kuchnia1-640.webp" srcset="img/kuchnia1-640.webp 640w, img/kuchnia1-1000.webp 1000w, img/kuchnia1-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Kuchnia restauracyjna z narzędziami kucharskimi" loading="lazy" decoding="async"></button>
-        </div><div class="dots"><i class="on"></i><i></i></div></div>
+        </div><div class="dots"><i class="on"></i><i></i><i></i><i></i></div></div>
         <div class="tx">
           <h3><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M1 11H12c6 0 9-3 9-6a3.6 3.6 0 1 0-7.2 0c0 3 3 6 9 6H33"/></svg>Kuchnia i zmywalnia</h3>
-          <p>Urządzenia kuchenne Hackman, zmywarki Wexiodisk, garnki i patelnie Paderno, piece do ziemniaków King Edward.</p>
-          <ul><li>Trzony i kotły warzelne</li><li>Piece konwekcyjne i combi</li><li>Patelnie uchylne</li><li>Zmywarki taśmowe</li><li>Sprzęt kucharski</li></ul>
+          <p>Urządzenia Angelo Po i Hackman, piece do pizzy z Włoch, zmywarki Wexiodisk, pojemniki termoizolacyjne Melform, piece do ziemniaków King Edward.</p>
+          <ul><li>Kuchnie gazowe i trzony</li><li>Piece do pizzy</li><li>Piece konwekcyjno-parowe</li><li>Zmywarki taśmowe</li><li>Transport żywności</li></ul>
         </div>
       </article>
 
       <article class="area" data-g="Pokoje i służba pięter">
-        <div class="ph" data-n="2 zdjęcia"><div class="slides">
-          <button type="button" data-full="img/pokoje0-full.webp" aria-label="Powiększ zdjęcie"><img src="img/pokoje0-640.webp" srcset="img/pokoje0-640.webp 640w, img/pokoje0-1000.webp 1000w, img/pokoje0-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Pokój hotelowy z białą pościelą" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="img/pokoje1-full.webp" aria-label="Powiększ zdjęcie"><img src="img/pokoje1-640.webp" srcset="img/pokoje1-640.webp 640w, img/pokoje1-1000.webp 1000w, img/pokoje1-1400.webp 1400w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1000" height="750" alt="Ręczniki hotelowe złożone na łóżku" loading="lazy" decoding="async"></button>
-        </div><div class="dots"><i class="on"></i><i></i></div></div>
+        <div class="ph" data-n="5 zdjęć"><div class="slides">
+          <button type="button" data-full="img/fb87-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb87-640.webp" srcset="img/fb87-640.webp 640w, img/fb87-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Wózki dla służby pięter" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb35-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb35-640.webp" srcset="img/fb35-640.webp 640w, img/fb35-960.webp 960w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="960" height="800" alt="Pokój hotelowy z materacem" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb81-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb81-640.webp" srcset="img/fb81-640.webp 640w, img/fb81-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Wózki na bieliznę" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb21-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb21-640.webp" srcset="img/fb21-640.webp 640w, img/fb21-1000.webp 1000w, img/fb21-1400.webp 1400w, img/fb21-1638.webp 1638w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="1638" height="1365" alt="Minibar hotelowy" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="img/fb84-full.webp" aria-label="Powiększ zdjęcie"><img src="img/fb84-640.webp" srcset="img/fb84-640.webp 640w, img/fb84-940.webp 940w" sizes="(max-width:767px) 84vw, (max-width:1180px) 46vw, 31vw" width="940" height="783" alt="Wieszaki ruchome" loading="lazy" decoding="async"></button>
+        </div><div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div></div>
         <div class="tx">
           <h3><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M1 11H12c6 0 9-3 9-6a3.6 3.6 0 1 0-7.2 0c0 3 3 6 9 6H33"/></svg>Pokoje i służba pięter</h3>
-          <p>Łóżka hotelowe i składane, materace, wózki serwisowe, bielizna hotelowa i akcesoria do SPA.</p>
-          <ul><li>Łóżka i materace</li><li>Wózki na bieliznę</li><li>Pościel i ręczniki</li><li>Szlafroki</li><li>Pojemniki na odpadki</li></ul>
+          <p>Łóżka i materace, minibary, wózki dla służby pięter ViPush, wózki na bieliznę, wieszaki ruchome z Francji i bielizna hotelowa.</p>
+          <ul><li>Łóżka i materace</li><li>Minibary</li><li>Wózki housekeeping</li><li>Wózki na bieliznę</li><li>Wieszaki ruchome</li></ul>
         </div>
       </article>
     </div>
     <div class="swipe" aria-hidden="true"><span class="cnt">1 / 6</span><i></i><span>przesuń w bok</span></div>
+  </div>
+</section>
+
+<section class="out" id="tarasy">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>Tarasy, ogrody i restauracje tunelowe</h2>
+        <svg class="ln" viewBox="0 0 120 22" aria-hidden="true"><path d="M1 15H44c9 0 13-4 13-8.5a5.5 5.5 0 1 0-11 0C46 11 50 15 59 15H119"/></svg>
+      </div>
+      <p>Linia nie kończy się na drzwiach restauracji. Wyposażamy też tarasy, ogródki, strefy przy basenie i bufety pod gołym niebem.</p>
+    </div>
+  </div>
+  <div class="gal" data-g="Tarasy, ogrody i restauracje tunelowe">
+    <button type="button" data-full="img/fbg2-1800.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg2-720.webp" srcset="img/fbg2-720.webp 720w, img/fbg2-1800.webp 1800w" sizes="(max-width:767px) 94vw, 785px" width="1800" height="1192" alt="Zimowa restauracja tunelowa przy hotelu w górach" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg0-2048.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg0-720.webp" srcset="img/fbg0-720.webp 720w, img/fbg0-2048.webp 2048w" sizes="(max-width:767px) 129vw, 1082px" width="2048" height="984" alt="Restauracja tunelowa nocą w ogrodzie hotelowym" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg22-1200.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg22-720.webp" srcset="img/fbg22-720.webp 720w, img/fbg22-1200.webp 1200w" sizes="(max-width:767px) 83vw, 693px" width="1200" height="900" alt="Meble wypoczynkowe na zadaszonym tarasie" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg29-750.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg29-720.webp" srcset="img/fbg29-720.webp 720w, img/fbg29-750.webp 750w" sizes="(max-width:767px) 62vw, 520px" width="750" height="750" alt="Meble aluminiowe przy basenie" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg37-1024.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg37-720.webp" srcset="img/fbg37-720.webp 720w, img/fbg37-1024.webp 1024w" sizes="(max-width:767px) 93vw, 781px" width="1024" height="682" alt="Sofy w salonie z widokiem na jezioro" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg38-1004.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg38-720.webp" srcset="img/fbg38-720.webp 720w, img/fbg38-1004.webp 1004w" sizes="(max-width:767px) 82vw, 689px" width="1004" height="758" alt="Białe fotele ogrodowe na tarasie" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg39-1024.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg39-720.webp" srcset="img/fbg39-720.webp 720w, img/fbg39-1024.webp 1024w" sizes="(max-width:767px) 93vw, 781px" width="1024" height="682" alt="Pufy na drewnianym tarasie przy basenie" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg40-1024.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg40-720.webp" srcset="img/fbg40-720.webp 720w, img/fbg40-1024.webp 1024w" sizes="(max-width:767px) 93vw, 781px" width="1024" height="682" alt="Leżanki i fotele przy basenie" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg41-1024.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg41-720.webp" srcset="img/fbg41-720.webp 720w, img/fbg41-1024.webp 1024w" sizes="(max-width:767px) 93vw, 782px" width="1024" height="681" alt="Białe meble ogrodowe na tarasie nad wodą" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg42-1200.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg42-720.webp" srcset="img/fbg42-720.webp 720w, img/fbg42-1200.webp 1200w" sizes="(max-width:767px) 93vw, 780px" width="1200" height="800" alt="Bufet zewnętrzny nad jeziorem" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg43-1028.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg43-720.webp" srcset="img/fbg43-720.webp 720w, img/fbg43-1028.webp 1028w" sizes="(max-width:767px) 93vw, 780px" width="1028" height="685" alt="Bufet przed zabytkową fasadą hotelu" loading="lazy" decoding="async"></button>
+    <button type="button" data-full="img/fbg45-1425.webp" aria-label="Powiększ zdjęcie"><img src="img/fbg45-720.webp" srcset="img/fbg45-720.webp 720w, img/fbg45-1425.webp 1425w" sizes="(max-width:767px) 93vw, 780px" width="1425" height="950" alt="Bufet na dziedzińcu" loading="lazy" decoding="async"></button>
+  </div>
+  <div class="wrap">
+    <div class="gbar" aria-hidden="true"><span class="gcnt">1 / 12</span><i></i><span>przesuń w bok</span></div>
+    <div class="facts">
+      <div><h3>Restauracje i tarasy tunelowe</h3><p>Letnie i zimowe tarasy z pełnym wyposażeniem, składane z elementów o długości 1,5 m, oryginalnej produkcji hiszpańskiej.</p></div>
+      <div><h3>Meble zewnętrzne i parasole</h3><p>Meble ratanowe i aluminiowe, pojedynczo i w zestawach, do kawiarni i restauracji hotelowych, ogródków i miejsc wypoczynku.</p></div>
+      <div><h3>Zabudowa na zamówienie</h3><p>Zabudowa meblowa restauracji, kawiarni, cukierni i sklepów według Państwa wymiarów: projekt włoskich projektantów, wykonanie i montaż.</p></div>
+    </div>
   </div>
 </section>
 
@@ -410,7 +469,7 @@ footer .bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
         <h2>Marki, które sprowadzamy</h2>
         <svg class="ln" viewBox="0 0 120 22" aria-hidden="true"><path d="M1 15H44c9 0 13-4 13-8.5a5.5 5.5 0 1 0-11 0C46 11 50 15 59 15H119"/></svg>
       </div>
-      <p>Sprzęt najwyższej jakości, wyprodukowany oryginalnie w krajach Unii Europejskiej, w USA i w Australii.</p>
+      <p>Sprzęt najwyższej jakości, wyprodukowany oryginalnie w krajach Unii Europejskiej (w dużej części we Włoszech), w USA i w Australii.</p>
     </div>
     <div class="bgrid">
       <div><b>Forbes Group</b><span>meble bankietowe i konferencyjne, recepcje</span></div>
@@ -423,6 +482,11 @@ footer .bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
       <div><b>Vista Alegre</b><span>porcelana i kieliszki</span></div>
       <div><b>La Pavoni</b><span>ekspresy do kawy dla gastronomii</span></div>
       <div><b>Metos</b><span>urządzenia do kuchni profesjonalnych</span></div>
+      <div><b>Angelo Po</b><span>kuchnie gazowe i urządzenia zaplecza</span></div>
+      <div><b>Melform</b><span>transport żywności i serwis potraw</span></div>
+      <div><b>Cartaffini</b><span>zastawa melaminowa</span></div>
+      <div><b>Paderno</b><span>systemy bufetowe, garnki i patelnie</span></div>
+      <div><b>ViPush</b><span>wózki dla służby pięter</span></div>
     </div>
     <div class="eco"><svg viewBox="0 0 44 22" aria-hidden="true"><path d="M1 15H14c8 0 11-4 11-8a4.6 4.6 0 1 0-9.2 0c0 4 3 8 11 8H43"/></svg><p>Obok sprzętu z najwyższej półki mamy też wyposażenie w rozsądnej cenie, dla całej branży hotelowo-gastronomicznej, także dla szkół gastronomicznych i hotelarskich.</p></div>
   </div>
@@ -435,14 +499,14 @@ footer .bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
       <div>
         <h2>Polski dystrybutor z Warszawy</h2>
         <svg class="ln" viewBox="0 0 120 22" aria-hidden="true"><path d="M1 15H44c9 0 13-4 13-8.5a5.5 5.5 0 1 0-11 0C46 11 50 15 59 15H119"/></svg>
-        <p>CAUSA HORECA sp. z o.o. od ponad 20 lat wyposaża obiekty hotelowe i gastronomiczne. Przez ten czas wypracowaliśmy własną formułę: bardzo szeroki wybór sprzętu od sprawdzonych producentów, zebrany u jednego dostawcy.</p>
+        <p>CAUSA HORECA od 1991 roku dostarcza profesjonalny sprzęt dla hoteli, konferencji i gastronomii. Przez ten czas wypracowaliśmy własną formułę: bardzo szeroki wybór sprzętu od sprawdzonych producentów, zebrany u jednego dostawcy.</p>
         <p>Dzięki temu meble na salę, porcelanę na stół, ekspres do baru i zmywarkę do kuchni zamawia się w jednym miejscu.</p>
         <ul class="who">
           <li>Hotele i pensjonaty</li>
           <li>Centra konferencyjne</li>
           <li>Restauracje</li>
-          <li>Kawiarnie i bary</li>
-          <li>Catering</li>
+          <li>Kawiarnie, bary i cukiernie</li>
+          <li>Teatry i instytucje</li>
           <li>Szkoły branżowe</li>
         </ul>
       </div>
@@ -459,6 +523,9 @@ footer .bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
         <li>Dystrybutory i wyciskarki do soków</li>
         <li>Ruchome bary bankietowe</li>
         <li>Parasole dla gastronomii</li>
+        <li>Restauracje i tarasy tunelowe</li>
+        <li>Meble ratanowe i aluminiowe</li>
+        <li>Minibary hotelowe</li>
       </ul>
     </div>
   </div>
@@ -507,7 +574,7 @@ footer .bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
     <div class="cols">
       <div>
         <a class="logo" href="#" aria-label="CAUSA HORECA"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214 100"><path fill="currentColor" fill-rule="evenodd" d="M45.4 29.0 45.2 30.3 45.2 36.3 45.6 38.9 46.6 42.5 48.4 46.3 49.1 47.4 51.8 50.6 55.3 53.5 59.5 55.7 62.8 56.7 66.9 57.4 71.2 57.4 73.4 56.9 75.1 56.7 78.1 55.7 79.5 54.9 80.2 54.7 81.2 54.0 82.6 53.3 85.0 51.4 87.5 48.6 87.9 48.0 88.3 46.9 88.2 46.1 87.6 45.3 87.2 45.1 86.4 45.1 85.7 45.4 84.9 46.2 83.8 47.8 81.5 49.9 78.7 51.7 76.3 52.8 70.9 54.1 67.6 54.1 65.6 53.9 62.4 53.1 58.9 51.7 56.4 50.1 53.5 47.4 52.0 45.5 50.9 43.7 50.1 42.0 48.9 38.0 48.5 35.8 48.4 33.3 48.6 30.4 50.1 25.0 51.0 23.1 51.7 22.2 52.2 21.2 53.8 19.3 56.4 16.9 57.5 16.1 59.7 14.9 61.1 14.5 62.4 13.9 64.2 13.6 66.3 13.0 69.7 12.9 71.2 13.2 73.0 13.3 74.5 13.7 76.1 13.9 77.5 14.6 78.5 14.9 79.6 15.6 80.4 15.9 82.2 17.3 84.7 19.7 86.0 21.6 86.5 22.8 86.4 23.3 86.1 23.6 85.5 23.8 82.2 23.8 79.8 24.4 78.5 25.1 77.5 25.9 75.9 27.8 75.2 29.3 74.8 31.2 75.1 33.8 76.5 36.6 78.4 38.4 79.9 39.2 81.7 39.6 85.8 39.6 87.8 39.2 88.8 38.6 90.3 37.1 90.8 36.3 91.6 33.8 91.8 31.7 91.7 28.2 92.3 27.4 101.1 27.2 101.8 27.4 102.5 28.1 102.7 29.0 102.5 31.1 102.5 50.2 102.7 51.4 103.3 52.8 104.3 54.3 105.7 55.6 107.8 56.7 109.6 57.0 111.1 57.0 113.1 56.6 115.3 55.4 116.3 54.5 117.7 52.0 118.1 49.9 118.1 38.0 118.6 36.5 119.5 35.6 120.7 35.2 127.4 35.2 128.3 35.9 128.5 36.6 128.5 50.4 129.2 52.6 130.4 54.5 131.8 55.7 134.1 56.8 135.4 57.0 137.1 57.0 139.7 56.4 141.1 55.6 142.6 53.8 143.7 51.8 144.0 50.2 143.9 36.2 143.4 34.7 142.5 33.5 141.8 32.9 140.7 32.3 139.5 32.0 133.0 32.0 132.3 31.7 131.9 31.2 131.7 26.1 131.7 18.3 131.8 16.8 132.0 16.2 132.4 15.6 133.8 14.2 134.7 13.7 136.0 13.3 149.9 13.3 151.0 13.6 152.9 13.8 156.1 15.2 157.5 16.3 158.7 17.5 160.1 19.7 161.0 22.8 161.0 24.9 160.7 27.0 160.1 29.2 158.6 31.6 157.1 33.1 156.0 33.9 154.7 35.4 154.1 37.1 154.1 39.6 154.3 40.3 155.9 42.5 156.4 43.5 160.7 49.2 161.3 50.3 162.8 52.2 164.2 54.4 165.3 55.5 165.7 55.7 166.9 55.7 167.4 55.4 167.7 54.8 167.7 53.6 166.8 52.1 165.1 49.9 163.5 47.4 162.0 45.6 160.7 43.5 159.0 41.4 158.8 40.9 157.9 39.7 157.5 38.8 157.5 38.0 158.0 36.8 159.9 35.1 161.6 33.2 162.7 31.4 163.8 28.9 163.9 27.4 164.4 25.5 164.5 24.3 164.3 21.8 163.8 19.7 162.0 16.1 160.2 14.0 157.7 12.2 156.1 11.4 153.9 10.6 151.1 10.1 144.9 10.0 134.7 10.1 133.5 10.4 132.2 11.0 130.3 12.7 129.0 14.8 128.5 16.6 128.4 31.0 127.8 31.7 127.0 32.0 119.0 32.1 117.4 32.9 115.9 34.1 115.3 35.1 115.0 36.2 115.0 48.1 114.6 50.5 114.0 51.7 113.2 52.6 112.1 53.3 110.8 53.7 109.5 53.6 107.9 52.9 107.1 52.2 106.0 50.6 105.8 49.8 105.8 28.3 106.5 27.4 107.2 27.2 111.4 27.3 114.8 26.7 115.8 26.1 116.6 25.3 117.9 23.1 118.2 21.7 118.1 17.3 117.7 15.2 117.0 13.8 116.3 12.8 114.9 11.5 113.1 10.4 111.9 10.1 108.7 10.1 107.8 10.3 105.7 11.4 104.3 12.8 103.1 14.7 102.6 16.4 102.6 22.4 102.3 23.3 101.9 23.7 101.1 24.0 92.7 24.0 91.6 23.8 91.0 23.5 90.3 22.8 89.7 21.2 89.0 19.9 86.2 16.1 83.9 14.1 80.4 12.1 76.3 10.5 74.3 10.1 71.6 10.0 69.0 9.6 66.8 9.6 62.8 10.3 61.0 11.0 59.6 11.3 56.3 12.8 52.3 15.8 49.3 19.3 47.2 22.8 46.6 24.2 46.0 27.2Z M132.8 35.2 138.6 35.3 139.8 35.9 140.4 36.6 140.7 37.4 140.9 48.9 140.7 50.0 140.0 51.6 139.3 52.4 138.3 53.1 136.7 53.7 135.4 53.6 133.7 52.9 132.8 52.0 131.9 50.4 131.7 48.5 131.7 37.0 131.9 35.9 132.3 35.4Z M87.7 27.5 88.2 28.3 88.4 29.7 88.3 33.0 87.7 34.8 86.7 35.8 86.0 36.1 85.1 36.2 81.5 36.1 80.5 35.7 79.0 34.3 78.3 32.5 78.3 31.1 78.9 29.4 80.2 28.0 81.2 27.5 82.0 27.3 86.7 27.2Z M109.4 13.4 110.6 13.3 112.5 13.9 113.3 14.5 114.0 15.3 114.7 16.9 114.7 21.8 114.4 22.5 113.4 23.5 112.5 23.9 107.1 23.9 106.6 23.7 105.9 22.9 105.8 17.1 106.0 16.3 106.4 15.6 107.5 14.4 108.2 13.9Z M104.5 75.2 104.0 76.0 104.0 88.6 104.3 89.4 104.8 89.7 105.5 89.7 105.9 89.5 106.4 88.9 106.5 84.5 106.8 83.7 107.1 83.4 107.6 83.2 113.8 83.2 114.3 83.4 114.7 83.8 114.9 84.4 114.9 88.2 115.1 89.2 115.3 89.5 115.7 89.7 116.4 89.7 116.8 89.5 117.2 89.1 117.4 88.5 117.5 76.9 117.3 75.6 116.6 75.1 115.7 75.1 115.2 75.4 115.0 75.8 114.9 76.8 114.9 80.1 114.4 80.9 113.1 81.2 108.0 81.2 107.1 80.9 106.6 80.2 106.6 76.8 106.5 75.9 106.3 75.5 105.6 75.1Z M200.0 75.1 199.2 75.7 198.1 77.9 197.1 81.0 196.2 82.8 195.9 84.0 194.3 87.6 194.1 88.3 194.2 89.3 194.8 89.7 195.8 89.5 196.5 88.8 197.2 86.9 198.2 85.9 199.2 85.7 202.6 85.8 203.4 86.1 203.9 86.6 205.3 89.4 205.8 89.7 206.9 89.7 207.4 89.4 207.5 88.5 207.0 87.5 206.6 86.1 206.1 85.3 205.6 83.7 205.1 82.9 204.7 81.5 204.1 80.4 203.5 78.3 202.7 76.4 202.2 75.5 201.7 75.1Z M200.5 79.7 200.9 79.7 201.3 80.1 202.2 82.2 202.1 83.1 201.8 83.4 201.1 83.6 199.7 83.5 199.3 83.2 199.1 82.7 199.3 81.8 199.9 80.4Z M80.8 75.3 80.1 76.2 79.3 78.2 79.0 79.5 78.2 81.0 76.9 84.7 76.2 85.9 75.8 87.4 75.3 88.4 75.4 89.4 75.9 89.7 76.7 89.7 77.2 89.5 77.6 89.1 78.5 86.9 79.1 86.2 79.5 86.0 84.2 85.8 84.7 86.0 85.2 86.5 85.9 87.8 86.1 88.6 86.6 89.4 87.3 89.7 88.3 89.6 88.7 89.2 88.6 87.8 87.9 85.9 87.1 84.6 86.6 82.9 85.9 81.6 85.2 79.3 84.0 77.0 83.5 75.6 83.0 75.2 82.0 75.0Z M81.7 79.7 82.2 79.7 82.7 80.2 83.5 82.3 83.4 83.0 82.8 83.5 81.0 83.5 80.5 83.1 80.4 82.8 80.5 82.0 81.0 80.6Z M43.1 75.4 42.8 75.9 42.6 76.9 42.6 82.9 43.0 86.2 43.3 87.2 43.7 87.8 44.5 88.6 46.3 89.6 47.6 89.9 51.2 89.8 52.0 89.6 53.4 88.8 54.8 87.3 55.7 85.1 55.8 76.3 55.5 75.4 54.8 75.0 53.9 75.0 53.5 75.2 53.2 75.6 53.0 77.1 52.9 85.1 52.4 86.2 51.6 87.0 50.9 87.4 49.8 87.7 48.0 87.6 46.8 87.1 46.1 86.5 45.4 84.4 45.5 77.3 45.3 75.8 44.8 75.2 44.2 75.0 43.6 75.1Z M30.7 75.1 30.0 75.7 28.9 78.4 28.3 79.4 27.9 80.8 27.2 82.2 26.9 83.5 26.3 84.5 25.9 85.8 25.4 86.6 24.8 88.1 24.7 89.1 25.0 89.5 25.4 89.7 26.2 89.7 26.6 89.5 27.5 88.3 28.1 86.7 28.5 86.2 29.0 85.9 32.2 85.8 33.5 85.9 34.1 86.1 34.8 86.8 35.8 89.0 36.7 89.7 37.6 89.7 38.0 89.5 38.2 89.1 37.9 87.6 37.0 85.7 35.7 82.0 34.0 78.4 33.6 77.0 33.1 76.0 32.4 75.2 31.5 75.0Z M31.3 79.6 31.6 79.6 32.0 79.9 32.9 82.0 33.0 82.8 32.8 83.2 32.4 83.5 30.5 83.5 29.9 82.9 29.9 82.2 30.8 80.0Z M162.6 75.1 162.1 75.6 162.0 76.1 161.9 85.6 162.0 88.4 162.2 89.2 162.4 89.5 163.4 89.8 170.2 89.8 171.0 89.5 171.4 88.9 171.3 88.1 170.4 87.4 165.8 87.4 165.3 87.2 164.8 86.7 164.6 86.1 164.6 84.1 164.7 83.7 165.3 83.1 169.0 83.0 169.7 82.6 169.8 81.9 169.6 81.5 169.1 81.2 166.0 81.2 165.2 81.0 164.6 80.2 164.6 77.9 165.2 77.1 165.7 76.9 170.9 76.8 171.4 76.2 171.3 75.6 170.9 75.2 169.6 74.9 163.4 74.9Z M145.4 75.3 145.1 75.8 145.0 76.8 145.0 88.3 145.1 89.1 145.6 89.6 146.4 89.7 147.0 89.5 147.3 89.2 147.6 88.3 147.7 84.8 148.3 84.0 149.0 83.9 149.5 84.1 150.2 84.8 151.3 86.4 153.8 89.4 154.4 89.7 156.0 89.6 156.2 89.4 156.2 88.8 155.8 88.0 154.1 85.8 153.1 84.0 153.2 83.2 154.7 81.4 155.4 79.5 155.3 78.2 154.8 77.0 154.0 76.2 152.3 75.3 151.5 75.1 147.4 74.9 145.8 75.1Z M147.8 77.6 148.5 77.1 149.2 77.1 151.0 77.5 151.6 77.8 152.2 78.4 152.5 79.2 152.5 79.7 152.0 80.7 151.4 81.2 150.2 81.7 148.7 81.8 148.2 81.6 147.8 81.2 147.6 80.5 147.6 78.1Z M183.0 74.5 181.6 75.0 180.8 75.1 179.7 75.6 178.4 76.4 177.2 77.6 176.2 79.3 175.6 81.6 175.6 82.4 176.3 86.0 177.1 87.2 177.9 88.0 178.6 88.5 181.0 89.7 183.0 90.0 184.8 90.0 186.8 89.6 188.7 88.7 189.2 88.0 189.0 87.3 188.4 86.8 187.8 86.8 185.5 87.5 183.3 87.7 181.5 87.2 180.7 86.8 179.3 85.5 178.8 84.6 178.3 82.7 178.3 81.8 178.6 80.5 179.2 79.1 180.3 78.0 181.6 77.3 183.4 76.9 185.3 76.9 187.3 77.8 188.1 77.8 188.7 77.4 188.9 77.0 188.9 76.3 188.5 75.7 187.6 75.2 183.9 74.5Z M128.6 74.9 127.4 75.4 125.7 76.4 125.0 77.1 123.7 78.9 123.3 79.9 123.0 81.7 123.1 83.8 123.4 84.9 124.2 86.5 125.0 87.5 126.4 88.7 128.0 89.6 128.6 89.8 132.9 89.9 133.9 89.6 135.8 88.6 136.9 87.8 137.6 87.1 138.7 85.3 139.4 83.0 139.4 81.1 138.6 78.6 137.9 77.6 136.5 76.2 134.8 75.2 133.5 75.0 132.0 74.5 130.5 74.5Z M132.8 77.1 134.7 78.0 135.8 79.2 136.7 81.9 136.5 83.4 135.7 85.4 134.5 86.7 133.5 87.2 131.6 87.7 129.8 87.6 128.0 86.8 126.6 85.2 125.8 83.3 125.8 81.2 126.9 79.0 127.6 78.2 128.4 77.6 130.0 77.0 131.1 76.9Z M69.4 75.0 67.9 74.6 66.4 74.5 63.8 75.1 63.2 75.4 62.2 76.3 61.3 77.7 61.2 79.3 62.1 81.1 62.8 81.8 64.1 82.7 65.2 83.2 67.1 84.4 68.0 85.3 68.2 85.9 68.1 86.5 67.6 87.1 66.4 87.6 64.6 87.6 63.0 87.1 61.9 87.1 61.5 87.3 61.2 87.7 61.3 88.6 61.8 89.1 62.7 89.6 64.5 90.0 68.0 89.7 69.6 88.8 70.7 87.3 70.9 86.3 70.9 85.2 70.7 84.3 70.4 83.8 69.2 82.6 65.6 80.5 64.3 79.2 64.1 78.6 64.4 77.8 64.8 77.4 65.6 77.0 67.2 76.9 69.2 77.4 69.8 77.2 70.3 76.6 70.4 75.9 70.0 75.3Z M11.0 75.2 9.2 76.3 8.2 77.3 7.4 78.4 6.4 80.7 6.3 83.5 7.4 86.5 9.0 88.3 11.5 89.6 12.2 89.8 16.7 89.8 17.5 89.6 19.2 88.8 19.8 88.1 19.7 87.1 19.3 86.7 18.4 86.7 17.0 87.3 15.2 87.7 13.4 87.6 12.1 87.2 11.2 86.7 10.1 85.6 9.8 85.1 9.2 83.3 9.1 81.8 9.8 79.6 10.6 78.5 11.9 77.5 13.5 76.9 14.9 76.8 16.3 77.0 17.9 77.7 19.0 77.7 19.4 77.5 19.8 76.9 19.7 76.2 19.1 75.6 18.4 75.2 15.7 74.5 13.6 74.5Z"/></svg></a>
-        <p style="margin-top:16px;max-width:22em">Dystrybutor sprzętu i wyposażenia dla hoteli, restauracji, kawiarni i cateringu.</p>
+        <p style="margin-top:16px;max-width:22em">Dystrybutor sprzętu i wyposażenia dla hoteli, konferencji i gastronomii.</p>
       </div>
       <div>
         <h4>Oferta</h4>
@@ -523,7 +590,7 @@ footer .bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
       </div>
     </div>
     <div class="bot">
-      <span>&copy; <span id="rok">2026</span> CAUSA HORECA sp. z o.o. &middot; zdjęcia poglądowe: Unsplash</span>
+      <span>&copy; <span id="rok">2026</span> CAUSA HORECA sp. z o.o. &middot; zdjęcia: CAUSA HORECA, część poglądowych: Unsplash</span>
       <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=causahoreca.com&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
 
     </div>
@@ -573,6 +640,14 @@ lb.addEventListener('click',function(e){if(e.target===lb)close()});
 addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')lb.querySelector('.pv').click();if(e.key==='ArrowRight')lb.querySelector('.nx').click()});
 var tx0=0;lb.addEventListener('touchstart',function(e){tx0=e.touches[0].clientX},{passive:true});
 lb.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-tx0;if(Math.abs(d)>50&&set.length>1){(d<0?lb.querySelector('.nx'):lb.querySelector('.pv')).click()}});
+
+/* galeria tarasow: palec + mysz */
+var gl=document.querySelector('.gal'),gc=document.querySelector('.gcnt'),gb=[].slice.call(gl.querySelectorAll('button')),gd=false,gx=0,gs=0,gm=false;
+gl.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;gd=true;gm=false;gx=e.clientX;gs=gl.scrollLeft;gl.classList.add('drag')});
+addEventListener('pointermove',function(e){if(!gd)return;var dx=e.clientX-gx;if(Math.abs(dx)>5)gm=true;gl.scrollLeft=gs-dx});
+addEventListener('pointerup',function(){if(!gd)return;gd=false;gl.classList.remove('drag')});
+gl.addEventListener('scroll',function(){var l=gl.getBoundingClientRect().left,k=0;gb.forEach(function(b,i){if(b.getBoundingClientRect().left-l<gl.clientWidth*0.25)k=i});gc.textContent=(k+1)+' / '+gb.length},{passive:true});
+gb.forEach(function(x,i){x.addEventListener('click',function(e){if(gm){e.preventDefault();gm=false;return}open(gb,i,gl.getAttribute('data-g'))})});
 
 /* mapa po kliknięciu */
 var mp=document.getElementById('mapa');
